@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+:root {
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-300: hsl(212, 45%, 89%);
+  --clr-neutral-400: hsl(220, 15%, 55%);
+  --clr-neutral-700: hsl(218, 44%, 22%);
+
+  --ff-default: Outfit;
+  --fw-normal: 400;
+  --fw-bold: 700;
+}
+
+body {
+  color: var(--clr-neutral-400);
+  font-family: var(--ff-default);
+  font-size: 0.925rem;
+  font-weight: var(--fw-normal);
+  background-color: var(--clr-neutral-300);
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: var(--clr-neutral-100);
+  overflow: hidden;
+  border-radius: 1rem;
+  padding: 0.875rem;
+
+  display: grid;
+  max-width: 300px;
+  text-align: center;
+}
+
+.qrcode-image {
+  border-radius: 1rem;
+}
+
+.card-content {
+  margin-top: 1.5rem;
+  width: 90%;
+  margin-inline: auto;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: var(--clr-neutral-700);
+  font-weight: var(--fw-bold);
+}
+.card-text {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .card {
+    margin: 0 2em;
+  }
+}
